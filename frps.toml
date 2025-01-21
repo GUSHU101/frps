@@ -1,12 +1,11 @@
 bindAddr = "0.0.0.0"
 bindPort = 7000
-#kcpBindPort = 7000
-quicBindPort = 7000
+quicBindPort = 7001
 
 vhostHTTPPort = 80
 vhostHTTPSPort = 443
 
-transport.maxPoolCount = 2000
+transport.maxPoolCount = 1000  # 根据服务器性能调整
 transport.tcpMux = true
 transport.tcpMuxKeepaliveInterval = 60
 transport.tcpKeepalive = 7200
@@ -14,11 +13,11 @@ transport.tls.force = false
 
 webServer.addr = "0.0.0.0"
 webServer.port = 7500
-webServer.user = "admin"
-webServer.password = "admin"
+webServer.user = "your_username"  # 更新为更强的用户名
+webServer.password = "your_secure_password"  # 更新为更强的密码
 webServer.pprofEnable = false
 
-log.to = "./frps.log"
+log.to = "/var/log/frps.log"  # 设置为绝对路径
 log.level = "info"
 log.maxDays = 3
 log.disablePrintColor = false
@@ -32,4 +31,4 @@ allowPorts = [
 
 maxPortsPerClient = 8
 udpPacketSize = 1500
-natholeAnalysisDataReserveHours = 168
+natholeAnalysisDataReserveHours = 72  # 减少数据保留时间
