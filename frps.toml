@@ -13,8 +13,8 @@ transport.tls.force = false
 
 webServer.addr = "0.0.0.0"
 webServer.port = 7500
-webServer.user = "your_username"  # 更新为更强的用户名
-webServer.password = "your_secure_password"  # 更新为更强的密码
+webServer.user = "gu_shu01"  # 更新为更强的用户名
+webServer.password = "gu_shu02"  # 更新为更强的密码
 webServer.pprofEnable = false
 
 log.to = "/var/log/frps.log"  # 设置为绝对路径
@@ -23,7 +23,7 @@ log.maxDays = 3
 log.disablePrintColor = false
 
 auth.method = "token"
-auth.token = "12345678"
+auth.token = "190666"
 
 allowPorts = [
   { start = 10001, end = 50000 }
